@@ -12,7 +12,9 @@ export interface Meta {
   type: any,
 }
 
-type TypeProcessorFn = (input: string) => any;
+interface TypeProcessorFn {
+  (input: string): any
+}
 
 export const typeProcessors: WeakMap<any, TypeProcessorFn> = new WeakMap();
 
